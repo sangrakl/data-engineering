@@ -11,6 +11,7 @@ sudo apt-get install -y python3-pip
 
 #### Next install Airflow and other Python modules we need
 
+This doesn't work due to a bug reported at https://github.com/apache/airflow/issues/11965
 ```
 sudo pip3 install apache-airflow['postgres'] cryptography psycopg2-binary boto3 botocore
 ```
