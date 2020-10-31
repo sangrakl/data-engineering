@@ -30,7 +30,6 @@ sudo useradd -s /bin/bash airflow -g airflow -d /var/lib/airflow -m
 To change the user to airflow, run the following. Running "bash" will make your life easier:
 ```
 sudo su airflow
-bash
 ```
 
 
