@@ -24,7 +24,7 @@ Create a dedicated group and account for Airflow. airflow account will have /var
 
 ```
 sudo groupadd airflow
-sudo useradd airflow -g airflow -d /var/lib/airflow -m
+sudo useradd -s /bin/bash airflow -g airflow -d /var/lib/airflow -m
 ```
 
 To change the user to airflow, run the following. Running "bash" will make your life easier:
