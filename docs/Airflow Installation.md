@@ -83,7 +83,7 @@ airflow.cfg  airflow.db  dags   logs  unittests.cfg
 #### Now edit /var/lib/airflow/airflow.cfg to do the following 3 things:
 
  * change the "executor" to LocalExecutor from SequentialExecutor
- * change the db connection string ("sql_alchemy_conn") to point to the local Postgres installed above
+ * change the db connection string ("sql_alchemy_conn") to point to the local Postgres installed above or a new one provided to you
    * Here you need to use the ID, HOST, PASSWORD and DATABASE assigned to you
  * change Loadexample setting to False
  
