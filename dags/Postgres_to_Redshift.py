@@ -11,7 +11,7 @@ dag = DAG(
     schedule_interval="@once",
     max_active_runs=1,
     concurrency=2,
-    start_date=datetime(2020, 8, 10),
+    start_date=datetime(2020, 11, 5),
     catchup=False
 )
 
