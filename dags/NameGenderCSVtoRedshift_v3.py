@@ -49,7 +49,7 @@ def load(**context):
     lines = context["task_instance"].xcom_pull(key="return_value", task_ids="transform")
     lines = iter(lines)
     next(lines)
-    sql = "BEGIN; DELETE FROM TABLE {schema}.{table};"
+    sql = "BEGIN; DELETE FROM {schema}.{table};"
     for line in lines:
         if line != "":
             (name, gender) = line.split(",")
