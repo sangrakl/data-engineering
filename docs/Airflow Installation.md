@@ -261,10 +261,12 @@ export AIRFLOW_HOME
 cd ~/
 ```
 
-Log out of airflow user and log in again (sudo su airflow)
+Log out of airflow user and log in again (sudo su airflow). Now you will start from the home directory. Also if you print out AIRFLOW_HOME environment variable, you will see it is set properly.
 ```
 ubuntu@ip-172-31-54-137:~$ sudo su airflow
 airflow@ip-172-31-54-137:~/$ pwd
+/var/lib/airflow
+airflow@ip-172-31-54-137:~/$ echo $AIRFLOW_HOME
 /var/lib/airflow
 ```
 
