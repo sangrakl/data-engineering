@@ -250,4 +250,21 @@ Last but not least restart the webserver as ubuntu user:
 sudo systemctl restart airflow-webserver
 ```
 
+## Set AIRFLOW_HOME environment variable in ~/.bashrc (/var/lib/airflow/.bashrc)
+
+Once you switch to airflow user (sudo su airflow), edit ~/.bashrc or /var/lib/airflow/.bashrc and append the following lines to the end of the file:
+
+```
+AIRFLOW_HOME=/var/lib/airflow
+export AIRFLOW_HOME
+
+cd ~/
+```
+
+Log out of airflow user and log in again (sudo su airflow)
+```
+ubuntu@ip-172-31-54-137:~$ sudo su airflow
+airflow@ip-172-31-54-137:~/$ pwd
+/var/lib/airflow
+```
 
