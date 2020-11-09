@@ -27,7 +27,7 @@ def extract(**context):
 
 def transform(**context):
     text = context["task_instance"].xcom_pull(key="return_value", task_ids="extract")
-    lines = text.split("\n")
+    lines = text.split("\n")[1:]
     return lines
 
 
