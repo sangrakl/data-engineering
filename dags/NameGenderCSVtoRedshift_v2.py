@@ -60,6 +60,8 @@ def load(lines):
 
 def etl(**context):
     link = context["params"]["url"]
+    # task자체에 대한 정보 (일부는 DAG의 정보가 되기도 함)를 읽고 싶다면 context['task_instance'] 혹은 context['ti']를 통해 가능
+    # https://airflow.readthedocs.io/en/latest/_api/airflow/models/taskinstance/index.html#airflow.models.TaskInstance
     task_instance = context['task_instance']
     execution_date = context['execution_date']
 
