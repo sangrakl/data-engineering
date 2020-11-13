@@ -1,25 +1,24 @@
-# Superset Installation
-
-This time I used docker for installation:
+# Superset Installation via Docker
 
 ```
-git clone https://github.com/apache/incubator-superset/
-cd incubator-superset
-sudo snap install docker
+sudo apt install docker.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-sudo snap services
-sudo snap start docker
+sudo systemctl enable docker
+sudo systemctl start docker
+
+git clone https://github.com/apache/incubator-superset/
+cd incubator-superset
 sudo docker-compose up &
 ```
 
-The installation is done when you see the following message:
+The installation is done when you see the following message and then it will take some time to initialize:
 ```
 superset_init            | ######################################################################
 superset_init            | 
 superset_init            | 
-superset_init            | Init Step 4/4 [Complete] -- Setting up roles and perms
+superset_init            | Init Step 4/4 [Starting] -- Loading examples
 superset_init            | 
 superset_init            | 
 superset_init            | ######################################################################
