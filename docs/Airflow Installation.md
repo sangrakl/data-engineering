@@ -13,8 +13,7 @@ sudo apt-get install -y python3-pip
 
 This doesn't work due to a bug reported at https://github.com/apache/airflow/issues/11965
 ```
-sudo pip3 install apache-airflow==1.10.12 \
- --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-1.10.12/constraints-3.7.txt"
+sudo pip3 install apache-airflow==1.10.12 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-1.10.12/constraints-3.7.txt"
 sudo pip3 install cryptography psycopg2-binary boto3 botocore 
 ```
 
